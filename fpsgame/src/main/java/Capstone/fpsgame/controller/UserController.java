@@ -70,6 +70,7 @@ public class UserController {
             // ProcessBuilder로 exe 파일 실행
             ProcessBuilder processBuilder = new ProcessBuilder(exeFilePath);
             Process process = processBuilder.start();
+            Thread.sleep(5000);
 
             // exe 파일로 JSON 데이터를 전달
             try (OutputStream os = process.getOutputStream();
@@ -77,7 +78,6 @@ public class UserController {
                 writer.write(jsonInput); // JSON 데이터를 stdin으로 전달
                 writer.flush(); // 데이터 강제 전송
             }
-
             // exe 파일 출력 읽기
             try (BufferedReader reader = new BufferedReader(
                     new InputStreamReader(process.getInputStream()))) {

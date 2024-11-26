@@ -52,8 +52,6 @@ public class UserService {
       Weapon weapon= userInfo.getWeapon();
     return SignInResponseDto.from(user,userInfo,weapon);
     }
-    public String changeUserInfo(){
 
-    }
 
 }

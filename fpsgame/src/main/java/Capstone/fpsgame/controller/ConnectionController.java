@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 public class ConnectionController {
-
     private final String UNREAL_SERVER_URL = "http://<UNREAL_SERVER_IP>:<UNREAL_SERVER_PORT>/receive-fbx"; // Unreal 서버 URL
     private final String AI_SERVER_URL = "http://<AI_SERVER_IP>:<AI_SERVER_PORT>/receive-text"; // Unreal 서버 URL
     @ResponseBody
